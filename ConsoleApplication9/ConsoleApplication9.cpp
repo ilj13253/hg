@@ -179,7 +179,7 @@ int main() {//это точка входа
     setlocale(LC_ALL, "rus");//это точка чтобы вывести русский язык
     SetConsoleCP(1251);//это кодировка
     StudentFile manager("имя по умолчанию:", "тема по умолчанию:");
-    manager.ReadFromFile("studentsj.txt");
+    manager.ReadFromFile("students.txt");
     // Обновление оценки студента
     manager.UpdScore("Алекс", 57);
     // Удаление студента
@@ -190,14 +190,14 @@ int main() {//это точка входа
     manager.PrintStudents();
     // Запись данных в файл
     manager.WriteToFile("sorted_students.txt");
-    //string filename;
-    //cout << "Введите имя файла: ";
-    //cin >> filename;
-    //Util::PrintSymmetricWords(filename);
-    //string inputFilename, outputFilename;
-    //cout << "Введите имя входного файла: ";
-    //cin >> inputFilename;
-    //cout << "Введите имя выходного файла: ";
-    //cin >> outputFilename;
-    //Util::RemoveDuplicates(inputFilename, outputFilename);
+    string filename;
+    cout << "Введите имя файла: ";
+    cin >> filename;
+    Util::PrintSymmetricWords(filename);
+    string inputFilename, outputFilename;
+    cout << "Введите имя входного файла: ";
+    cin >> inputFilename;
+    cout << "Введите имя выходного файла: ";
+    cin >> outputFilename;
+    Util::RemoveDuplicates(inputFilename, outputFilename);
 }
